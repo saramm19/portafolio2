@@ -7,10 +7,18 @@
   <title>Portafolio Saradev </title>
   <link rel="shortcut icon" href="img/icons8-ordenador-portátil-64.png" type="image/x-icon" />
   <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
 
   <!-- CDN -->
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
@@ -25,31 +33,22 @@
     }
   </style>
 
-
-
 </head>
 
 
 <body>
-
-
 
   <header class="header blur">
     <a class="logo" href="./index.html"><span class="logo__span">SaraDev</span></a>
 
     <nav class="menu nav">
       <ul class="menu__list panel">
-        <li class="menu__item"><a class="menu__link">Portafolio</a></li>
-        <li class="menu__item"><a class="menu__link">Skills</a></li>
-        <li class="menu__item"><a class="menu__link">About me</a></li>
-        <li class="menu__item"><a class="menu__link">Contact</a></li>
+        <li class="menu__item"><a class="menu__link" href="#portafolio">Portafolio</a></li>
+        <li class="menu__item"><a class="menu__link" href="#skills">Habilidades</a></li>
+        <li class="menu__item"><a class="menu__link" href="#about-me">Sobre mi</a></li>
+        <li class="menu__item"><a class="menu__link" href="#Contacto">Contacto</a></li>
       </ul>
     </nav>
-    <button class="hamburger hamburger--emphatic-r" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
   </header>
 
   <main>
@@ -79,17 +78,18 @@
 
 
 
-    <section class="about">
+    <section class="about" id="about-me">
       <div class="about_container">
         <img class="about_img" src="img/hero-inferior.png.png" alt="imagen sobre mi">
         <div class="about_content">
           <h1>Sobre mi</h1>
           <p class="about_text">
             ¡Hola! Soy sara Martínez estudiante de ingeniería de sistemas, apasionada por el mundo del desarrollo web
-            que está en constante aprendizaje y busca oportunidades para crecer.
-            Aunque no cuento con experiencia profesional, he dedicado mi tiempo y esfuerzo a construir proyectos
-            personales que demuestran mis
-            habilidades en HTLM, CSS, JAVASCRIPT y otras tecnologías web.
+            que está en constante aprendizaje y busca oportunidades para crecer. con experiencia en la creación de
+            interfaces de usuario intuitivas y atractivas. He trabajado en una variedad de proyectos personales que me
+            han permitido desarrollar y perfeccionar mis habilidades en HTML, CSS, java y JavaScript y frameworks
+            modernos como
+            React
           </p>
         </div>
       </div>
@@ -99,48 +99,52 @@
 
 
     <!--  Aqui va nuestro Portafolio -->
-    <main class="products container" id="lista-1">
+    <section id="portafolio">
+      <main class="products container" id="lista-1">
 
-      <h2>Portafolio</h2>
+        <h2>Portafolio</h2>
 
-      <div class="product-content">
+        <div class="product-content">
 
-        <div class="product">
-          <img src="img/proyecto1.png" alt="proyecto 1">
-          <div class="product-txt">
-            <h3>pagina web creada con html, css y js</h3>
-            <div class="icons"></div>
-            <a href="#" class="agregar-carrito btn-2" data-id="1">Ver proyecto</a>
-            <a href="#" class="agregar-carrito btn-2" data-id="1">Ver Repositorio</a>
+          <div class="product">
+            <img src="img/proyecto1.png" alt="proyecto 1">
+            <div class="product-txt">
+              <h3>pagina web creada con html, css y js</h3>
+              <div class="icons"></div>
+              <a href="https://restautant-gourmet.netlify.app/" class="agregar-carrito btn-2" data-id="1"  target="_blank">Ver proyecto</a>
+              <a href="https://github.com/saramm19/Proyecto1" class="agregar-carrito btn-2" data-id="1" target="_blank">Ver Repositorio</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <video autoplay loop muted preload="metadata">
+              <source src="img/proyecto.2.mp4" type="video/mp4" alt="proyecto 2">
+              Tu navegador no soporta la etiqueta de video.
+            </video>
+            <div class="product-txt">
+              <h3>pagina web creada en wordpress</h3>
+              <div class="icons"></div>
+              <a href="https://wordpresspag.netlify.app/" class="agregar-carrito btn-2" data-id="1" target="_blank">Ver proyecto</a>
+              <a href="https://github.com/saramm19/paginaport" class="agregar-carrito btn-2" data-id="1" target="_blank">Ver Repositorio</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="" alt="proyecto 3">
+            <div class="product-txt">
+              <h3>Sistema de ventas en java</h3>
+              <div class="icons"></div>
+              <a href="#" class="agregar-carrito btn-2" data-id="1">Ver proyecto</a>
+              <a href="#" class="agregar-carrito btn-2" data-id="1">Ver Repositorio</a>
+            </div>
           </div>
         </div>
-
-        <div class="product">
-          <img src="img/proyecto1.png" alt="proyecto 1">
-          <div class="product-txt">
-            <h3>pagina web creada con html, css y js</h3>
-            <div class="icons"></div>
-            <a href="#" class="agregar-carrito btn-2" data-id="1">Ver proyecto</a>
-            <a href="#" class="agregar-carrito btn-2" data-id="1">Ver Repositorio</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="img/proyecto1.png" alt="proyecto 1">
-          <div class="product-txt">
-            <h3>pagina web creada con html, css y js</h3>
-            <div class="icons"></div>
-            <a href="#" class="agregar-carrito btn-2" data-id="1">Ver proyecto</a>
-            <a href="#" class="agregar-carrito btn-2" data-id="1">Ver Repositorio</a>
-          </div>
-        </div>
-      </div>
-    </main>
+      </main>
+    </section>
 
 
-   
     <section class="skills" id="skills">
-      <h2 class="skills__title text__gradient">Skills</h2>
+      <h2 class="skills__title text__gradient">Habilidades</h2>
 
       <div class="skills__container">
         <div class="card">
@@ -166,49 +170,37 @@
       </div>
     </section>
 
-
-
-    <section class="contact" id="contact">
-      <h2 class="contact__title">Contact</h2>
-      <form class="form" action="#">
-        <label for="name" class="form__label">Name</label>
-        <input type="text" name="" id="name" class="form__input" placeholder="Your name" />
-        <label for="email" class="form__label">Email</label>
-        <input type="email" name="" id="email" class="form__input" placeholder="Your email" />
-        <label class="form__label" for="message">Message</label>
-        <textarea class="form__textarea" name="message" id="message" cols="25" rows="10"
-          placeholder="Your message"></textarea>
-        <input class="form__btn " type="submit" value="Send" />
-      </form>
-    </section>
   </main>
 
-  <footer class="footer">
-    <a class="logo" href="index.html"><span class="logo__span">SaraDev</span></a>
-    <div class="footer__links">
-      <nav class="footer__menu">
-        <ul class="footer__list">
-          <li class="footer__element">
-            <a class="footer__link" href="#">Mis proyectos</a>
-          </li>
-          <li class="footer__element">
-            <a class="footer__link" href="#">Portafolio</a>
-          </li>
-          <li class="footer__element">
-            <a class="footer__link" href="#">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer__social">
-      <iconify-icon class="hero__icon hero__icon--github" icon="brandico:github" style="color: #9400ff"></iconify-icon>
-      <iconify-icon class="hero__icon hero__icon--linkedin" icon="devicon-plain:linkedin"
-        style="color: #9400ff"></iconify-icon>
-      <iconify-icon class="hero__icon hero__icon--mail" icon="fluent:mail-20-filled"
-        style="color: #9400ff"></iconify-icon>
-    </div>
-  </footer>
 
+  <section id="Contacto">
+    <footer class="footer">
+      <a class="logo" href="index.html"><span class="logo__span">SaraDev</span></a>
+
+      <div class="footer__social">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/saradevelopr/" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a class="btn btn-primary" href="https://wa.me/3196300193" target="_blank" >
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a class="btn btn-primary" href="mailto:sm785510@gmail.com" target="_blank">
+          <i class="bi bi-envelope-check"></i>
+        </a>
+      </div>
+
+      <div class="footer_links">
+        <a class="footer_link" href="mailto:sm785510@gmail.com">
+          <i class="bi bi-envelope-check"></i>
+          <span>sm785510@gmail.com</span>
+        </a>
+        <a class="footer_link" href="mailto:sm785510@gmail.com">
+          <i class="bi bi-github"></i>
+          <span>@saramm19</span>
+        </a>
+      </div>
+    </footer>
+  </section>
 
 </body>
 
