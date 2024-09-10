@@ -6,110 +6,89 @@
  
 }
 
-.header {
-  display: flex;
-	width: 74%;
-	justify-content: center;
-	align-items: center;
-	color: var(--on-primary);
-	position: fixed;
-	z-index: 4;
-  background-color: #2b2929; 
-  backdrop-filter: blur(20px);
-	padding: 1rem 3rem;
-	border-radius: 20px;
-	height: 6px;
-	min-height: 4rem;
-	border: 0.03px solid #47187ee5;
-	flex-wrap: wrap-reverse;
-  margin-left: 10%;
-  background-image: linear-gradient(to right, #050541, #420e6d);
- 
-  
-  
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', sans-serif;
+  background-image: linear-gradient(to right, #080849, #4f1d79);
 }
 
+.header {
+  display: flex;
+  width: 74%;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--on-primary);
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  background-color: #2b2929;
+  backdrop-filter: blur(20px);
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  height: auto;
+  min-height: 4rem;
+  border: 0.03px solid #47187ee5;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  transition: all 0.3s ease;
+  background-image: linear-gradient(to right, #050541, #420e6d);
+}
+
+
 .logo {
-  font-size: 36px;
+  font-size: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 400;
+  font-weight: bold;
   background: linear-gradient(135deg, #ff00ff, #00ffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-right: 10%;
+  
     
 }   
 
 .menu {
-  width: 400%;
-  max-width: 600px;
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1.25rem;
 }
 
 .menu__list {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: #c4bdbd;
-  gap: 50px;
-  margin-left: 5.7rem;
-
-  
-}
-
-.menu__item {
-  font-size: 16px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .menu__item a {
-  color:  rgb(238, 234, 238);
+  color: #eee;
+  font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 400;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .menu__item a:hover {
-  color: rgb(147, 34, 151);
-  transition: 0.2s ease-in-out;
-  position: relative;
+  color: #931f94;
+  
 }
 
 .menu__item:hover {
   transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
-.hamburger{
+.hamburger {
   display: none;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 24px;
 }
 
-@media screen and (max-width: 768px) {
-  .header {
-    flex-direction: column;
-  }
 
-  .menu {
-    width: auto;
-  }
-
-  .menu__item {
-    margin: 10px 0;
-  }
-
-  .menu__list {
-    flex-direction: column;
-    display: none;
-  }
-
-  .menu__item a {
-    font-size: 2.5rem;
-  }
-
-  .hamburger {
-    display:block;
-  }
-
-  
-}
 
 .panel.is-active{
   transform: translate(0,0);
@@ -125,25 +104,34 @@
 }
 
 .hero {
-  padding: 6rem 2.2rem 0 2.2rem;
+  padding: 20px;
   width: 100%;
   height: 100vh;
   min-height: 100dvh;
-	background-size: 200%;
+  background-size: 200%;
   display: flex;
-	flex-direction: column;
+  flex-direction: column;
   color: var(--on-primary);
-	background: var(--hero-bg);
-	animation: presentation 3s linear forwards;
-	align-items: center;
+  background: var(--hero-bg);
+  animation: presentation 3s linear forwards;
+  align-items: center;
   flex-wrap: wrap;
-	position: relative;
-	justify-content: center;
+  position: relative;
+  justify-content: center;
+
 	
 }
 
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 .text_content {	
-  font-size: 38px;
+  font-size: 2.6rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #ff00ff, #00ffff);
   -webkit-background-clip: text;
@@ -154,8 +142,8 @@
 
 
 .hero__pic {
-  width: 90%;
-  max-width: 25rem;
+  width: 80%;
+  max-width: 400px;
   border-radius: 50%;
   border: 5px solid var(--main-color);
   animation: floatingIcon 3s ease infinite 0.4s;
@@ -166,46 +154,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  font-size: 30px;
+  gap: 1.9rem;
+  font-size: 2%;
+  
 }
 
 .hero__icon {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 .hero__icon:hover {
   transform: scale(1.2);
 }
 
-.hero__icon--email {
-  font-size: 3rem;
-}
 
-@media screen and (max-width: 768px) {
-  .hero__container {
-    flex-direction: column;
-    justify-content: center;
-    height: 100dvh;
-  }
-  .hero__pic {
-    min-width: 275px;
-  }
-  .hero__titulo {
-    text-align: center;
-    font-size: 3.6rem;
-    margin-top: 10px;
-  }
-  .hero__description {
-    font-size: 1.8rem;
-  }
-}
+
+
 
 /* seccion portafolio */
 
 .products {
- padding: 90px;
- text-align: center;
+  padding: 2rem;
  
 }
 
@@ -244,11 +213,13 @@
 .product-content {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  
-  
-  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;  
+}
+
+.product video {
+  width: 100%;
+  border-radius: 8px;
 }
 
 
@@ -282,21 +253,12 @@
 
 } 
 
-.product img {
-  width: 332px;
-  height: 160px;
-  margin-bottom: 10px;
-  transition: 0.5s ease-in-out;
-  object-fit: cover;
-  object-position: center 0;
-  max-height: 400px;
+.product img, .product video {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
-
-.product video {
-  height: 200px;
-  transition: 0.5s ease-in-out;
-}
-
 
 
 .project-buttons button:hover {
@@ -312,6 +274,7 @@
 .iconify__icon{
   font-size: 1.6rem;
 }
+
 
 /* skills */
 
@@ -340,18 +303,18 @@
   width: 40%;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .card {
   height: 190px;
-  width: 140px;
+  width: 120px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 14px;
-  pad: 2rem 3rem;
+  padding: 1rem;
   background-color: #9500ff67;
   z-index: 5;
   backdrop-filter: blur(1px);
@@ -383,16 +346,9 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--main-color);
 }
-  
-@media screen and (max-width: 768px) {
-  .skills {
-    height: auto;
-    padding: 13rem 0;
-  }
-  .skills__img--bg {
-    min-width: 321px;
-  }
-}
+
+ 
+
 
 /*section about */
 
@@ -402,15 +358,15 @@
   align-items: center;
   gap: 3rem;
   width: 100%;
-  padding: 70px;
+  padding: 3rem 1rem;
   height: 400px;
     
 }
 
 .about__container {
   display: flex;
-  justify-content: space-around;
-  gap: 4.4rem;
+  justify-content: space-between;
+  padding: 25rem;
   
 }
 
@@ -436,16 +392,13 @@
 }
 
 .about_img {
-  max-width: 37%;
-  border-radius: 10px;
-  margin-right: 10px;
-  margin-left: 3px; 
- 
+  width: 80%;
+  max-width: 30rem;
 }
 
 
 .about_text {
-  font-size: 22px;
+  font-size: 1.4rem;
   font-family: "Lora", serif;
   text-align: right;
   margin-left: 45%;
@@ -453,26 +406,10 @@
   margin-top: -310px;
   background: linear-gradient(135deg, #ff00ff, #00ffff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  
- 
+  -webkit-text-fill-color: transparent; 
 }
 
-@media screen and (max-width: 768px) {
 
-  .about__container {
-		padding: 8rem 3.1rem;
-		flex-direction: column-reverse;
-		align-items: center;
-	}
-	.about__img {
-		width: 29.5rem;
-		height: 38.1rem;
-		min-width: 29.5rem;
-		min-height: 38.1rem;
-	}
-}
 
 /* section contact */
 
@@ -587,24 +524,86 @@
   font-size: 17px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-}
-
-.footer_link {
-  line-height: 10%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   text-decoration: none;
-  margin-right: 6px;
-  
-
 }
-  
-
 
 @media screen and (max-width: 768px) {
-    .footer {
-      flex-direction: column;
-      height: 24dvh;
-    }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .menu__item a {
+    font-size: 1.8rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hero__pic {
+    width: 80%;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__container {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about_img {
+    max-width: 250px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
 }
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 1rem 5rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skills__container {
+    width: 50%;
+  }
+
+  .about_img {
+    max-width: 350px;
+  }
+}
+  
+
+
 
 /* animation css */
 
